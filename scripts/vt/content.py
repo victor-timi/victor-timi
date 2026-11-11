@@ -3,7 +3,7 @@
 PROOF = [
     ("14", "products built, from first", "commit to production"),
     ("5+", "years as an independent", "engineer"),
-    ("3,017", "contributions in the", "last 12 months"),
+    ("{total}", "contributions in the", "last 12 months"),
     ("1,000+", "test files across five", "client codebases"),
 ]
 

@@ -1,17 +1,15 @@
 """The hero banner: name, positioning and the contributions ribbon."""
 import calendar
-import json
 import math
-from pathlib import Path
 
+from vt.contributions import load_contributions
 from vt.svg import Svg
 from vt.theme import AMBER, CREAM, EMBER
 
-CONTRIB = Path(__file__).resolve().parents[2] / "data" / "contributions.json"
 
 
 def hero():
-    data = json.loads(CONTRIB.read_text())
+    data = load_contributions()
     months = list(data["months"].items())[-13:]
     svg = Svg(1200, 620, f"Victor Timi, senior AI and full-stack engineer. {data['total']:,} contributions in the last 12 months.")
     svg.defs.append(

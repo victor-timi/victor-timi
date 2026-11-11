@@ -3,3 +3,4 @@ preview.html
 .DS_Store
 .progress/
 .tasks/
+__pycache__/

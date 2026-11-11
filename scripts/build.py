@@ -2,7 +2,7 @@
 """Build the profile SVGs in assets/ with subset fonts embedded.
 
     python3 scripts/build.py            build from data/
-    python3 scripts/build.py --refresh  refetch contributions with gh first
+    python3 scripts/build.py --refresh LOGIN  refetch LOGIN's contributions with gh first
 """
 import sys
 from pathlib import Path
@@ -18,7 +18,7 @@ ASSETS = Path(__file__).resolve().parent.parent / "assets"
 
 def main():
     if "--refresh" in sys.argv:
-        refresh_contributions()
+        refresh_contributions(sys.argv[sys.argv.index("--refresh") + 1])
     ASSETS.mkdir(exist_ok=True)
     outputs = {"hero.svg": hero()}
     for mode, theme in THEMES.items():

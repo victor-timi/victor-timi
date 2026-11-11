@@ -1,15 +1,22 @@
-"""Refetch monthly contribution counts from GitHub with the gh CLI."""
+"""Monthly contribution counts: read from data/, refetched from GitHub with the gh CLI."""
 import collections
 import json
 import subprocess
+from pathlib import Path
 
-from vt.hero import CONTRIB
+CONTRIB = Path(__file__).resolve().parents[2] / "data" / "contributions.json"
+QUERY = ("query($login: String!) { user(login: $login) { contributionsCollection { contributionCalendar "
+         "{ totalContributions weeks { contributionDays { date contributionCount } } } } } }")
 
 
-def refresh_contributions():
-    query = "{viewer{contributionsCollection{contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}}}}"
-    raw = subprocess.run(["gh", "api", "graphql", "-f", f"query={query}"], capture_output=True, text=True, check=True).stdout
-    cal = json.loads(raw)["data"]["viewer"]["contributionsCollection"]["contributionCalendar"]
+def load_contributions():
+    return json.loads(CONTRIB.read_text())
+
+
+def refresh_contributions(login):
+    raw = subprocess.run(["gh", "api", "graphql", "-f", f"query={QUERY}", "-f", f"login={login}"],
+                         capture_output=True, text=True, check=True).stdout
+    cal = json.loads(raw)["data"]["user"]["contributionsCollection"]["contributionCalendar"]
     months = collections.OrderedDict()
     for week in cal["weeks"]:
         for day in week["contributionDays"]:
