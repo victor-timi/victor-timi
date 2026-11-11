@@ -1,5 +1,5 @@
 """Themed panels: proof strip, work cards and the how-I-build panel."""
-from vt.content import CHECKS, PRINCIPLES, PROOF
+from vt.content import ALSO, CHECKS, PRINCIPLES, PROOF, WORK
 from vt.contributions import load_contributions
 from vt.svg import Svg, badge, chip, mosaic, wrap
 from vt.theme import CREAM, EMBER
@@ -7,12 +7,13 @@ from vt.theme import CREAM, EMBER
 
 def proof(theme):
     total = f"{load_contributions()['total']:,}"
-    svg = Svg(1200, 184, f"14 products built. 5+ years independent. {total} contributions in the last 12 months. 1,000+ test files across five client codebases.")
+    products = len(WORK) + len(ALSO)
+    svg = Svg(1200, 184, f"{products} products built. 5+ years independent. {total} contributions in the last 12 months. 1,000+ test files across five client codebases.")
     svg.add(f'<rect width="1200" height="184" rx="24" fill="{theme["surface"]}"/>')
     col = (1200 - 96) / 4
     for i, (number, line1, line2) in enumerate(PROOF):
         x = 48 + i * col
-        svg.text(x, 92, number.format(total=total), "display", 700, 54, theme["accent"], track=-1)
+        svg.text(x, 92, number.format(total=total, products=products), "display", 700, 54, theme["accent"], track=-1)
         svg.text(x, 126, line1, "body", 400, 16, theme["soft"])
         svg.text(x, 148, line2, "body", 400, 16, theme["soft"])
     return svg
