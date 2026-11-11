@@ -11,6 +11,7 @@ from vt.content import WORK
 from vt.contributions import refresh_contributions
 from vt.hero import hero
 from vt.panels import card, how, proof
+from vt.readme import write_readme
 from vt.theme import THEMES
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
@@ -29,6 +30,8 @@ def main():
     for name, svg in outputs.items():
         (ASSETS / name).write_text(svg.render())
         print(f"{name:32} {(ASSETS / name).stat().st_size / 1024:6.1f} KB")
+
+    write_readme()
 
 
 if __name__ == "__main__":

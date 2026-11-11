@@ -36,8 +36,8 @@ def hero():
     svg.text(64, 354, "AI systems, SaaS platforms and the design systems under them.", "body", 400, 21, CREAM, opacity=.84)
     svg.text(64, 384, "Architecture, backend, interface and infrastructure, owned end to end.", "body", 400, 21, CREAM, opacity=.84)
 
-    svg.text(64, 452, f"{data['total']:,} contributions in the last 12 months", "mono", 500, 14, CREAM, opacity=.9)
-    svg.text(1136, 452, "most of them in private client repositories", "body", 400, 14, CREAM, "end", opacity=.62)
+    svg.text(64, 444, f"{data['total']:,} contributions in the last 12 months", "mono", 500, 14, CREAM, opacity=.9)
+    svg.text(1136, 444, "most of them in private client repositories", "body", 400, 14, CREAM, "end", opacity=.62)
     base, top, x0, x1, gap = 560, 476, 64, 1136, 10
     bar = (x1 - x0 - gap * (len(months) - 1)) / len(months)
     peak = max(v for _, v in months)
@@ -47,8 +47,10 @@ def hero():
         is_peak = value == peak
         fill = f'fill="{EMBER}"' if is_peak else f'fill="{CREAM}" fill-opacity=".26"'
         svg.add(f'<rect x="{x:.1f}" y="{base - h:.1f}" width="{bar:.1f}" height="{h:.1f}" rx="3" {fill}/>')
-        if is_peak:
-            svg.text(x + bar / 2, base - h - 8, str(value), "mono", 500, 13, EMBER, "middle")
+        svg.text(x + bar / 2, base - h - 8, str(value), "mono", 500, 13,
+                 EMBER if is_peak else CREAM, "middle", opacity=1 if is_peak else .7)
         label = calendar.month_abbr[int(month[5:])]
+        if i in (0, len(months) - 1):
+            label = f"{label} ’{month[2:4]}"
         svg.text(x + bar / 2, base + 24, label, "mono", 500, 12, CREAM, "middle", opacity=.55)
     return svg

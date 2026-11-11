@@ -9,7 +9,7 @@ PROOF = [
 
 
 WORK = [
-    dict(slug="thinkidx", name="ThinkIDX", chip="AI trust infrastructure", badge="thinkidx.com",
+    dict(slug="thinkidx", name="ThinkIDX", link="https://www.thinkidx.com", chip="AI trust infrastructure", badge="thinkidx.com",
          light="#4B57C8", dark="#9AA4F5",
          outcome="Verified authorship and citation checks across 14 external data providers.",
          label="How it works",
@@ -33,7 +33,7 @@ WORK = [
          label="Key decision",
          detail="The strictest of four layers wins. Only uncertain cases reach a human reviewer.",
          stack="Next.js · Google Cloud AI · MongoDB"),
-    dict(slug="conde", name="Conde", chip="Mobile commerce", badge="App Store",
+    dict(slug="conde", name="Conde", link="https://apps.apple.com/us/app/conde-hair-extensions/id6762065595", chip="Mobile commerce", badge="App Store",
          light="#A35A3E", dark="#E9A88C",
          outcome="A salon pro storefront with AI shade matching and licence checks in 52 jurisdictions.",
          label="Key decision",
@@ -75,4 +75,8 @@ CHECKS = [
     ("length", "functions and files within limits"),
     ("tests", "no skipped tests"),
     ("migrations", "no destructive renames"),
+]
+
+CONTACT = [
+    ("X @victortimi_", "https://x.com/victortimi_"),
 ]
