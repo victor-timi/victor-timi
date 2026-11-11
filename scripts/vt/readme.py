@@ -35,6 +35,8 @@ Most of what I build lives in private client repositories. These are the product
 
 {work_rows()}
 
+{picture("also", "Also built: ISM, Job Sniper, Plan With a Pro, Vespucci, Flexecution and voice, email and social automation.")}
+
 {picture("how", "How I build: standards a script enforces, from design tokens to migrations.")}
 
 ## Work with me

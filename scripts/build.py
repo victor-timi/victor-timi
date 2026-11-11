@@ -7,6 +7,7 @@
 import sys
 from pathlib import Path
 
+from vt.also import also
 from vt.content import WORK
 from vt.contributions import refresh_contributions
 from vt.hero import hero
@@ -25,6 +26,7 @@ def main():
     for mode, theme in THEMES.items():
         outputs[f"proof-{mode}.svg"] = proof(theme)
         outputs[f"how-{mode}.svg"] = how(theme)
+        outputs[f"also-{mode}.svg"] = also(theme)
         for i, item in enumerate(WORK):
             outputs[f"work-{item['slug']}-{mode}.svg"] = card(item, i, theme, mode)
     for name, svg in outputs.items():

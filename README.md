@@ -26,6 +26,8 @@ Most of what I build lives in private client repositories. These are the product
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-sdg-dark.svg"><img alt="SDG Grants: A searchable grants database mapped to the 17 UN Sustainable Development Goals." src="assets/work-sdg-light.svg" width="49%"></picture>
 </p>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/also-dark.svg"><img alt="Also built: ISM, Job Sniper, Plan With a Pro, Vespucci, Flexecution and voice, email and social automation." src="assets/also-light.svg" width="100%"></picture>
+
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/how-dark.svg"><img alt="How I build: standards a script enforces, from design tokens to migrations." src="assets/how-light.svg" width="100%"></picture>
 
 ## Work with me

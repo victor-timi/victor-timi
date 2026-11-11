@@ -80,3 +80,18 @@ CHECKS = [
 CONTACT = [
     ("X @victortimi_", "https://x.com/victortimi_"),
 ]
+
+ALSO = [
+    ("ISM", "AI data intelligence: extraction, enrichment and pgvector semantic search for student opportunities.",
+     "Next.js · Prisma · pgvector"),
+    ("Job Sniper", "A Claude research agent that searches the live web and writes structured proposals.",
+     "Python · Go · Claude"),
+    ("Plan With a Pro", "Insurance CRM with WebRTC calling, conferencing, transfers, IVR and ad lead capture.",
+     "Twilio Voice · Google and Meta Ads"),
+    ("Vespucci", "Multi-tenant travel SaaS with AI document extraction, double-entry accounting and LLM failover.",
+     "Go · PostgreSQL · Keycloak"),
+    ("Flexecution", "Multi-tenant enterprise ERP with seven role-based access profiles.",
+     "TypeScript · Node.js"),
+    ("Automation", "Voice, email and social automation that answers calls and books meetings.",
+     "Go · VAPI · SignalWire · Nylas"),
+]
