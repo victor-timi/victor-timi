@@ -34,4 +34,4 @@ Most of what I build lives in private client repositories. These are the product
 
 Open to contract work, consulting and remote roles in AI systems engineering, LLM architecture and full-stack development.
 
-[X @victortimi_](https://x.com/victortimi_)
+[LinkedIn](https://www.linkedin.com/in/victor-timi/) · [Upwork](https://www.upwork.com/freelancers/~017a99440998f8e199) · [X @victortimi_](https://x.com/victortimi_)
