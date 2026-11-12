@@ -78,6 +78,8 @@ CHECKS = [
 ]
 
 CONTACT = [
+    ("LinkedIn", "https://www.linkedin.com/in/victor-timi/"),
+    ("Upwork", "https://www.upwork.com/freelancers/~017a99440998f8e199"),
     ("X @victortimi_", "https://x.com/victortimi_"),
 ]
 

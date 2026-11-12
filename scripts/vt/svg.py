@@ -4,7 +4,7 @@ from xml.sax.saxutils import escape
 
 from vt.fonts import FONTS, font_data
 
-WIDTH_FACTOR = {"display": 0.56, "body": 0.53, "mono": 0.6, "serif": 0.47}
+WIDTH_FACTOR = {"display": 0.56, "body": 0.53, "mono": 0.6, "serif": 0.47, "hand": 0.42}
 
 def text_width(s, role, size):
     return len(s) * size * WIDTH_FACTOR[role]
