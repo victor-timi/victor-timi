@@ -15,6 +15,7 @@ FONTS = {
     "body": ("Hanken Grotesk", "wght@{w}", "normal"),
     "mono": ("IBM Plex Mono", "wght@{w}", "normal"),
     "serif": ("Playfair Display", "ital,wght@1,{w}", "italic"),
+    "hand": ("Caveat", "wght@{w}", "normal"),
 }
 def http_get(url, binary=False):
     for attempt in range(5):

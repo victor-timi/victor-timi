@@ -1,9 +1,10 @@
-"""Colour themes for the light and dark profile panels."""
+"""Colour themes for the light and dark profile panels (Graphite brand)."""
 
 THEMES = {
-    "light": dict(surface="#F3EFE7", ink="#0D2529", soft="#4F5D5E", faint="#76817F",
-                  accent="#B4612F", tint_alpha=0.13),
-    "dark": dict(surface="#142124", ink="#EFE8DC", soft="#A9B3B1", faint="#7D8987",
-                 accent="#F0A35E", tint_alpha=0.18),
+    "light": dict(surface="#F7F5F2", ink="#09090B", soft="#52525B", faint="#71717A",
+                  accent="#C2410C", tint_alpha=0.12),
+    "dark": dict(surface="#131316", ink="#FAFAF9", soft="#A1A1AA", faint="#71717A",
+                 accent="#FFB067", tint_alpha=0.16),
 }
-CREAM, AMBER, EMBER = "#FBF7EF", "#F2C27A", "#F0A35E"
+CREAM, AMBER, EMBER = "#FAFAF9", "#FFB067", "#FF5A36"
+INK, DEEP, WARM = "#09090B", "#131316", "#1F1A17"
