@@ -1,6 +1,6 @@
-<img alt="Victor Timi, senior AI and full-stack engineer. Builds software that holds up after launch." src="assets/hero.svg?v=f07c3ba7c9" width="100%">
+<img alt="Victor Timi, senior AI and full-stack engineer. Builds software that holds up after launch." src="assets/hero.svg?v=6fb2548a93" width="100%">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg?v=8413ddd02f"><img alt="14 products built. 5+ years independent. 3,227 contributions in the last 12 months. 1,000+ test files across five client codebases." src="assets/proof-light.svg?v=91179f92d4" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg?v=8527f0e25d"><img alt="14 products built. 5+ years independent. 3,236 contributions in the last 12 months. 1,000+ test files across five client codebases." src="assets/proof-light.svg?v=06fe090e4c" width="100%"></picture>
 
 ## Selected work
 
