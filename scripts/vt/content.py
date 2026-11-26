@@ -15,7 +15,7 @@ WORK = [
          label="How it works",
          detail="Concurrent Go services, cross-encoder reranking and durable Temporal workflows.",
          stack="Go · Temporal · Next.js · PostgreSQL · Redis"),
-    dict(slug="wehverse", name="WehVerse", chip="Multilingual RAG", badge="4 platforms",
+    dict(slug="weh-bible", name="Weh Bible", chip="Multilingual RAG", badge="4 platforms",
          light="#8A4FB0", dark="#CDA2EA",
          outcome="Source-traceable answers across 53.8M records in 1,172 languages.",
          label="How it works",
@@ -96,4 +96,8 @@ ALSO = [
      "TypeScript · Node.js"),
     ("Automation", "Voice, email and social automation that answers calls and books meetings.",
      "Go · VAPI · SignalWire · Nylas"),
+    ("Bored of Studies", "Upgrade and care of a 632,000-member HSC forum, moved to XenForo 2.3 and PHP 8.4.",
+     "XenForo · PHP · Redis"),
+    ("Skin by Zyphora", "A skincare store I co-founded and branded, priced in local currency across 14 regions.",
+     "Medusa · Next.js · Docker"),
 ]
