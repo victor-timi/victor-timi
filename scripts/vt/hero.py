@@ -1,4 +1,4 @@
-"""The hero banner: the LinkedIn banner's scene, positioning and the contributions ribbon."""
+"""The hero: a static banner (rasterised by make banner) and the live contributions ribbon below it."""
 import calendar
 
 from vt.contributions import load_contributions
@@ -6,11 +6,12 @@ from vt.hero_scene import defs, devices, footprint_trail, notes, orbits, private
 from vt.svg import Svg
 from vt.theme import AMBER, CREAM, DEEP, EMBER, INK, WARM
 
-W, H = 1200, 690
+W, H = 1200, 488
+RIBBON_H, RIBBON_DY = 214, 470
 LEFT = 64
 
 
-def background(svg):
+def background(svg, height=H):
     svg.defs.append(
         f'<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{INK}"/>'
         f'<stop offset=".5" stop-color="{DEEP}"/><stop offset="1" stop-color="{WARM}"/></linearGradient>'
@@ -20,9 +21,9 @@ def background(svg):
         '<stop offset="0" stop-color="#FF4D2E" stop-opacity=".16"/><stop offset="1" stop-color="#FF4D2E" stop-opacity="0"/></radialGradient>'
         f'<linearGradient id="word" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{AMBER}"/><stop offset="1" stop-color="{EMBER}"/></linearGradient>'
         f'<linearGradient id="peak" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="{EMBER}"/><stop offset="1" stop-color="{AMBER}"/></linearGradient>'
-        f'<clipPath id="card"><rect width="{W}" height="{H}" rx="28"/></clipPath>' + defs())
-    svg.add(f'<g clip-path="url(#card)"><rect width="{W}" height="{H}" fill="url(#bg)"/>'
-            f'<rect width="{W}" height="{H}" fill="url(#glowA)"/><rect width="{W}" height="{H}" fill="url(#glowB)"/>')
+        f'<clipPath id="card"><rect width="{W}" height="{height}" rx="28"/></clipPath>' + defs())
+    svg.add(f'<g clip-path="url(#card)"><rect width="{W}" height="{height}" fill="url(#bg)"/>'
+            f'<rect width="{W}" height="{height}" fill="url(#glowA)"/><rect width="{W}" height="{height}" fill="url(#glowB)"/>')
 
 
 def copy(svg):
@@ -57,9 +58,7 @@ def chart(svg, data):
 
 
 def hero():
-    data = load_contributions()
-    svg = Svg(W, H, f"Victor Timi, senior AI and full-stack engineer. Atomic steps make a giant footprint. "
-                    f"{data['total']:,} contributions in the last 12 months.")
+    svg = Svg(W, H, "Victor Timi, senior AI and full-stack engineer. Atomic steps make a giant footprint.")
     background(svg)
     wall(svg)
     orbits(svg)
@@ -67,5 +66,14 @@ def hero():
     svg.add('</g>')
     copy(svg)
     notes(svg)
+    return svg
+
+
+def ribbon():
+    data = load_contributions()
+    svg = Svg(W, RIBBON_H, f"{data['total']:,} contributions in the last 12 months, most in private client repositories.")
+    background(svg, RIBBON_H)
+    svg.add(f'<g transform="translate(0 {-RIBBON_DY})">')
     chart(svg, data)
+    svg.add('</g></g>')
     return svg

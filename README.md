@@ -1,6 +1,8 @@
-<img alt="Victor Timi, senior AI and full-stack engineer. Builds software that holds up after launch." src="assets/hero.svg?v=1e026e4046" width="100%">
+<img alt="Victor Timi, senior AI and full-stack engineer. Builds software that holds up after launch." src="assets/hero.webp?v=007428785d" width="100%">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg?v=4dcedfb3d3"><img alt="14 products built. 5+ years independent. 3,411 contributions in the last 12 months. 1,000+ test files across five client codebases." src="assets/proof-light.svg?v=e25783dcda" width="100%"></picture>
+<img alt="3,411 contributions in the last 12 months, most in private client repositories." src="assets/hero-ribbon.svg?v=92eeebc29f" width="100%">
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg?v=6bb04eaf31"><img alt="16 products built. 5+ years independent. 3,411 contributions in the last 12 months. 1,000+ test files across five client codebases." src="assets/proof-light.svg?v=f7039370b9" width="100%"></picture>
 
 ## Selected work
 
@@ -8,7 +10,7 @@ Most of what I build lives in private client repositories. These are the product
 
 <p>
 <a href="https://www.thinkidx.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-thinkidx-dark.svg?v=1b1710d830"><img alt="ThinkIDX: Verified authorship and citation checks across 14 external data providers." src="assets/work-thinkidx-light.svg?v=33f29b4321" width="49%"></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-wehverse-dark.svg?v=204a8de78a"><img alt="WehVerse: Source-traceable answers across 53.8M records in 1,172 languages." src="assets/work-wehverse-light.svg?v=4f1e3506e4" width="49%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-weh-bible-dark.svg?v=7be9b5a135"><img alt="Weh Bible: Source-traceable answers across 53.8M records in 1,172 languages." src="assets/work-weh-bible-light.svg?v=0677f8fb87" width="49%"></picture>
 </p>
 
 <p>
@@ -26,7 +28,7 @@ Most of what I build lives in private client repositories. These are the product
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-sdg-dark.svg?v=c7d5f61abb"><img alt="SDG Grants: A searchable grants database mapped to the 17 UN Sustainable Development Goals." src="assets/work-sdg-light.svg?v=02f073843b" width="49%"></picture>
 </p>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/also-dark.svg?v=f20b88cb69"><img alt="Also built: ISM, Job Sniper, Plan With a Pro, Vespucci, Flexecution and voice, email and social automation." src="assets/also-light.svg?v=949d4aef6b" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/also-dark.svg?v=a2b661aaa9"><img alt="Also built: ISM, Job Sniper, Plan With a Pro, Vespucci, Flexecution, Automation, Bored of Studies, Skin by Zyphora." src="assets/also-light.svg?v=506d4811b2" width="100%"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/how-dark.svg?v=9a26d76921"><img alt="How I build: standards a script enforces, from design tokens to migrations." src="assets/how-light.svg?v=1c85bfc751" width="100%"></picture>
 
